@@ -1,19 +1,32 @@
 {
   "name": "webiya-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Cool cli for webiya",
   "bin": {
     "webiya-cli": "./bin/webiya-cli.js"
   },
   "type": "module",
   "scripts": {
+    "start": "npm run build && node ./bin/webiya-cli.js",
+    "build": "npx tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Oryam",
   "license": "ISC",
   "devDependencies": {
+    "@types/chalk-animation": "^1.6.1",
+    "@types/inquirer": "^8.2.1",
     "@types/node": "^17.0.35",
     "typescript": "^4.7.2"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "dependencies": {
+    "chalk-animation": "^2.0.2",
+    "inquirer": "^8.2.4",
+    "tslib": "^2.4.0"
   }
 }
